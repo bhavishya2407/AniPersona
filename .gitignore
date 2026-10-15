@@ -1,0 +1,32 @@
+# Secrets and local environment configuration
+.env
+.env.local
+*.env
+!.env.example
+# Java / Maven
+**/target/
+**/.m2/
+# Frontend
+frontend/node_modules/
+frontend/dist/
+# Editor / OS
+.idea/
+.vscode/
+*.log
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Java / Spring Boot
+target/
+*.class
+
+# Frontend dependencies and builds
+frontend/node_modules/
+frontend/dist/
+
+# Local Maven files
+**/.m2/
+
+anipersona-backend/maven-local-settings.xml

@@ -1,0 +1,10 @@
+package com.anipersona.backend.config;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+@Configuration public class WebConfig implements WebMvcConfigurer {
+ private final String origin; public WebConfig(@Value("${anipersona.cors.allowed-origin}") String origin) { this.origin=origin; }
+ @Override public void addCorsMappings(CorsRegistry registry) { registry.addMapping("/api/**").allowedOrigins(origin).allowedMethods("GET","POST","DELETE").allowedHeaders("Content-Type","X-Session-Id").allowCredentials(false).maxAge(3600); }
+}
