@@ -98,7 +98,7 @@ public class OpenRouterService {
             payload.put("model", model);
             payload.put("messages", messages);
             payload.put("temperature", 0.8);
-            payload.put("max_tokens", 500);
+            payload.put("max_tokens", 1500);
             payload.put("stream", false);
 
             String requestBody = mapper.writeValueAsString(payload);
