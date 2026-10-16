@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    ```
     private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
     @ExceptionHandler(ApiException.class)
@@ -37,11 +36,11 @@ public class GlobalExceptionHandler {
                 "Something went wrong. Please try again.");
     }
 
-private ResponseEntity<Map<String, Object>> body(HttpStatus status, String message) {
-    return ResponseEntity.status(status).body(Map.of(
-            "timestamp", Instant.now().toString(),
-            "status", status.value(),
-            "message", message));
-}```
+    private ResponseEntity<Map<String, Object>> body(HttpStatus status, String message) {
+        return ResponseEntity.status(status).body(Map.of(
+                "timestamp", Instant.now().toString(),
+                "status", status.value(),
+                "message", message));
+    }
 
 }
